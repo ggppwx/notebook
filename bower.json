@@ -1,0 +1,28 @@
+{
+  "name": "notebook",
+  "description": "note book app",
+  "main": "app.js",
+  "authors": [
+    "roy gu <sirgujingwei@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ggppwx/notebook",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "ngQuill": "ng-quill#^3.4.0",
+    "quill": "^1.3.2",
+    "moment": "^2.19.2",
+    "angular-chart.js": "^1.1.1"
+  },
+  "resolutions": {
+    "quill": "1.1.5"
+  }
+}

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div ng-include="'views/notesidebar.html'"></div>
+    
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <h1 class="page-header">Dashboard</h1>
+
+      <div class="row">
+	<div ng-repeat="record in records" class="col-xs-12 col-sm-6 col-lg-4">
+	  <h2>{{record.title ? record.title : 'untitled'}}</h2>
+	  <div class="note-thumbnail">
+      	    
+      	    <p>{{record.snapshot}}</p>
+
+	  </div>
+	  
+	  <p>
+      	    <a class="btn btn-default" href="#/note/{{record.id}}">Edit</a>
+      	    <a class="btn btn-default" ng-click="delete(record.id)">Delete</a>
+	  </p>
+
+	</div><!--/.col-xs-6.col-lg-4-->
+
+      </div>
+      
+    </div>
+    
+
+  </div>
+</div>
+

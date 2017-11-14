@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row">
+
+    
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+	<li class="active"><a href="#/notelist">All charts</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+	<li><a href="">Nav item</a></li>
+	<li><a href="">Nav item again</a></li>
+	<li><a href="">One more nav</a></li>
+	<li><a href="">Another nav item</a></li>
+	<li><a href="">More navigation</a></li>
+      </ul>
+    </div>
+    
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      	<h1 class="page-header">Dashboard</h1>
+     	<div>
+			<input type="text" name="task" ng-model="task">
+			<input type="number" name="total" ng-model="total">
+
+
+			<div>
+				<!-- chart -->	
+				<canvas id="line" class="chart chart-line" chart-data="data"
+				chart-labels="labels" chart-series="series" chart-options="options"
+				chart-dataset-override="datasetOverride" chart-click="onClick">
+				</canvas>				
+				<uib-progressbar max="maxValue" value="progressValue"><span style="color:white; white-space:nowrap;">{{progressValue}} / {{maxValue}} </span></uib-progressbar>    		
+			</div>
+				
+			<input type="date" name="date" ng-model="date">
+			<input type="number" name="effort" ng-model="effort">
+			<button ng-click="save()">+</button>
+		</div>
+      
+    </div>
+    
+  </div>
+</div>

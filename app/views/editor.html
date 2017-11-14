@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div ng-include="'views/notesidebar.html'"></div>
+    
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <h1 class="page-header">Dashboard</h1>
+      <div>
+	<input type="text" name="title" ng-model="title" class="page-header">
+	<ng-quill-editor ng-model="message" on-content-changed="contentChanged(editor, html, text)">
+	</ng-quill-editor>
+
+	<button ng-click="save()"> save </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
