@@ -4,7 +4,7 @@
     
     <div class="col-sm-3 col-md-2 sidebar">
       <ul class="nav nav-sidebar">
-	<li class="active"><a href="#/notelist">All charts</a></li>
+	<li class="active"><a href="#/chart">All charts</a></li>
       </ul>
       <ul class="nav nav-sidebar">
 	<li><a href="">Nav item</a></li>
@@ -18,23 +18,28 @@
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       	<h1 class="page-header">Dashboard</h1>
      	<div>
-			<input type="text" name="task" ng-model="task">
-			<input type="number" name="total" ng-model="total">
+	    <input type="text" name="task" ng-model="title">
+	    <input type="number" name="total" ng-model="total">
 
 
-			<div>
-				<!-- chart -->	
-				<canvas id="line" class="chart chart-line" chart-data="data"
+	    <div>
+		<!-- chart -->	
+		<canvas id="line" class="chart chart-line" chart-data="data"
 				chart-labels="labels" chart-series="series" chart-options="options"
 				chart-dataset-override="datasetOverride" chart-click="onClick">
-				</canvas>				
-				<uib-progressbar max="maxValue" value="progressValue"><span style="color:white; white-space:nowrap;">{{progressValue}} / {{maxValue}} </span></uib-progressbar>    		
-			</div>
+		</canvas>				
+		<uib-progressbar max="maxValue" value="progressValue"><span style="color:white; white-space:nowrap;">{{progressValue}} / {{maxValue}} </span></uib-progressbar>    		
+	    </div>
+            <div>
+                <ng-quill-editor ng-model="content" on-content-changed="contentChanged(editor, html, text)">
+	        </ng-quill-editor>                            
+            </div>
 				
-			<input type="date" name="date" ng-model="date">
-			<input type="number" name="effort" ng-model="effort">
-			<button ng-click="save()">+</button>
-		</div>
+	    <input type="date" name="date" ng-model="date">
+	    <input type="number" name="effort" ng-model="effort">
+	    <button ng-click="save()">+</button>
+     
+	</div>
       
     </div>
     

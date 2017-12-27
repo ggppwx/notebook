@@ -4,10 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var ejs = require('ejs')
+var ejs = require('ejs');
 var mongoose = require('mongoose');
 
 var note = require('./routes/api/note');
+var chart = require('./routes/api/chart');
 var app = express();
 
 // view engine setup
@@ -30,6 +31,7 @@ var db = mongoose.connect("mongodb://localhost:27017/Notebook");
 
 
 app.use('/api/note', note);
+app.use('/api/chart', chart);
 app.use('/', function(req, res) {
     res.sendFile('index.html');
 });

@@ -19,7 +19,7 @@ router.post('/', function(req, res, next) {
 
 
 		console.log(obj);
-	})
+	});
 
 
 	res.json({status : 'OK'});
@@ -29,12 +29,11 @@ router.get('/', function(req, res) {
 	console.log('LIST api/note');
 
 	Note.find({}, 'title snapshot', function(err, objs) {
-
-		res.json({
-			status : 'OK',
-			notelist : objs
-		})
-
+            res.json({
+                    status : 'OK',
+                    notelist : objs
+            });
+            
 	});
 
 

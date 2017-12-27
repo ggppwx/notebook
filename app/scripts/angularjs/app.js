@@ -9,8 +9,8 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     	.when('/note/:id', {templateUrl: '/views/editor.html', controller: EditorCtrl})
     	.when('/editor', {templateUrl: '/views/editor.html', controller: EditorCtrl})
 
-    	.when('/chart', {templateUrl: '/views/chartlist.html'})
-        .when('/chart/new', {templateUrl: '/views/chart.html', controller: ChartCtrl})
+    	.when('/chart', {templateUrl: '/views/chartlist.html', controller: ChartListCtrl})
+        .when('/chart/:id', {templateUrl: '/views/chart.html', controller: ChartCtrl})
         .otherwise({redirectTo:'/'});
 }]);
 
